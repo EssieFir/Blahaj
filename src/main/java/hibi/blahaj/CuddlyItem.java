@@ -10,22 +10,24 @@ import net.minecraft.nbt.StringTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 import net.minecraftforge.common.util.FakePlayer;
 import org.jetbrains.annotations.Nullable;
 
-public class CuddlyItem extends Item {
+public class CuddlyItem extends ItemNameBlockItem {
 
 	public static final String OWNER_KEY = "Owner";
 
 	private final Component subtitle;
 
-	public CuddlyItem(Properties properties, String subtitle) {
-		super(properties);
+	public CuddlyItem(Block block, Properties properties, String subtitle) {
+		super(block, properties);
 		this.subtitle = subtitle == null? null: Component.translatable(subtitle).withStyle(ChatFormatting.GRAY);
 	}
 
