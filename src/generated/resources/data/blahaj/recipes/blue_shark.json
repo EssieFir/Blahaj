@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": {
+      "item": "minecraft:light_blue_wool"
+    },
+    "P": {
+      "item": "minecraft:pink_dye"
+    },
+    "W": {
+      "item": "minecraft:white_wool"
+    }
+  },
+  "pattern": [
+    " B ",
+    "BBB",
+    "PW "
+  ],
+  "result": {
+    "item": "blahaj:blue_shark"
+  }
+}

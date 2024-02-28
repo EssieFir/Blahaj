@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "o": {
+      "item": "minecraft:orange_wool"
+    }
+  },
+  "pattern": [
+    "ooo",
+    "ooo",
+    "   "
+  ],
+  "result": {
+    "item": "blahaj:bread"
+  }
+}

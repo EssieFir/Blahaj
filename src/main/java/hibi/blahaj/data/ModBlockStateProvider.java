@@ -23,8 +23,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
 	@Override
 	protected void registerStatesAndModels() {
 		cuddlyBlock(Common.BLUE_SHARK_BLOCK);
-		cuddlyBlock(Common.BREAD_BLOCK);
-	}
+		cuddlyBlock(Common.SOFT_BREAD_BLOCK);
+		cuddlyBlock(Common.SOFT_BEAR_BLOCK);
+}
 
 	private void cuddlyBlock(RegistryObject<Block> block) {
 		MultiPartBlockStateBuilder cuddlyBlock = getMultipartBuilder(block.get());

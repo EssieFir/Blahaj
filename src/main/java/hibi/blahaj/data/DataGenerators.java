@@ -16,5 +16,7 @@ public class DataGenerators {
 		ExistingFileHelper helper = event.getExistingFileHelper();
 
 		generator.addProvider(true, new ModBlockStateProvider(generator, helper));
+		generator.addProvider(true, new LootGenerator(generator));
+		generator.addProvider(true, new ModRecipeProvider(generator));
 	}
 }
