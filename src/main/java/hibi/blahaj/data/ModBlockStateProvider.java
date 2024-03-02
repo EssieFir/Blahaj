@@ -1,7 +1,7 @@
 package hibi.blahaj.data;
 
 import hibi.blahaj.Common;
-import hibi.blahaj.CuddlyBlock.CuddlySharkBlock;
+import hibi.blahaj.blocks.CuddlySharkBlock;
 import net.minecraft.core.Direction;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.world.level.block.Block;
@@ -25,7 +25,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 		cuddlyBlock(Common.BLUE_SHARK_BLOCK);
 		cuddlyBlock(Common.SOFT_BREAD_BLOCK);
 		cuddlyBlock(Common.SOFT_BEAR_BLOCK);
-}
+	}
 
 	private void cuddlyBlock(RegistryObject<Block> block) {
 		MultiPartBlockStateBuilder cuddlyBlock = getMultipartBuilder(block.get());

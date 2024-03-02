@@ -1,4 +1,4 @@
-package hibi.blahaj.CuddlyBlock;
+package hibi.blahaj.blocks;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -13,10 +13,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
-import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -24,10 +22,9 @@ import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
 
-public class CuddlyBreadBlock extends HorizontalDirectionalBlock {
+public abstract class CuddlyBlock extends HorizontalDirectionalBlock {
 	public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
-	public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
-	public CuddlyBreadBlock(Properties properties) {
+	public CuddlyBlock(Properties properties) {
 		super(properties);
 		this.registerDefaultState(this.stateDefinition.any()
 			.setValue(FACING, Direction.NORTH)
@@ -39,18 +36,18 @@ public class CuddlyBreadBlock extends HorizontalDirectionalBlock {
 		return RenderShape.MODEL;
 	}
 
-	VoxelShape SHAPE_NORTH = Shapes.box(0.3125, 0, -0.0625, 0.6875, 0.375, 1);
-	VoxelShape SHAPE_SOUTH = Shapes.box(0.3125, 0, 0, 0.6875, 0.375, 1.0625);
-	VoxelShape SHAPE_WEST = Shapes.box(-0.0625, 0, 0.3125, 1, 0.375, 0.6875);
-	VoxelShape SHAPE_EAST = Shapes.box(0, 0, 0.3125, 1.0625, 0.375, 0.6875);
 
+	public VoxelShape SHAPE_NORTH() { return Shapes.block(); }
+	public VoxelShape SHAPE_SOUTH() { return Shapes.block(); }
+	public VoxelShape SHAPE_EAST() { return Shapes.block(); }
+	public VoxelShape SHAPE_WEST() { return Shapes.block(); }
 	@Override
 	public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
-		if (pState.getValue(FACING).equals(Direction.NORTH)) return SHAPE_NORTH;
-		if (pState.getValue(FACING).equals( Direction.SOUTH)) return SHAPE_SOUTH;
-		if (pState.getValue(FACING).equals( Direction.WEST)) return SHAPE_WEST;
-		if (pState.getValue(FACING).equals( Direction.EAST)) return SHAPE_EAST;
-		else return SHAPE_NORTH;
+		if (pState.getValue(FACING).equals(Direction.NORTH)) return SHAPE_NORTH();
+		if (pState.getValue(FACING).equals( Direction.SOUTH)) return SHAPE_SOUTH();
+		if (pState.getValue(FACING).equals( Direction.WEST)) return SHAPE_WEST();
+		if (pState.getValue(FACING).equals( Direction.EAST)) return SHAPE_EAST();
+		else return SHAPE_NORTH();
 	}
 
 	public boolean propagatesSkylightDown(BlockState pState, BlockGetter pLevel, BlockPos pPos) {

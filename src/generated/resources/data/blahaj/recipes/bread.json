@@ -1,16 +1,8 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "key": {
-    "o": {
-      "item": "minecraft:orange_wool"
-    }
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "tag": "minecraft:wool"
   },
-  "pattern": [
-    "ooo",
-    "ooo",
-    "   "
-  ],
-  "result": {
-    "item": "blahaj:bread"
-  }
+  "result": "blahaj:bread"
 }
