@@ -2,8 +2,16 @@
 
 A Plushie Mod!
 
+## Current Plushies
+All plushies are made by placing any wool into a Stonecutter.
+
+![image](https://github.com/EssieFir/Plushed/assets/65592600/7bb61f11-2574-49b5-a0f6-199650201894) ![image](https://github.com/EssieFir/Plushed/assets/65592600/0a96c739-e54d-4838-991b-52467ba750fb)
+
+
+
 ## License
 
 This mod is licensed under the [Unlicense](./LICENSE).
 
-The icon of this project is the Blobhaj by Heatherhorns, and is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
+This mod is based on a project by hibi (The [Blahaj Mod](https://modrinth.com/mod/blahaj)),
+and code by agnor99 (From the [Blahaj Forge Port](https://modrinth.com/mod/blahaj-reforged))
