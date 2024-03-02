@@ -17,9 +17,6 @@ public class CuddlyOctoBlock extends CuddlyBlock {
 	}
 
 	@Override
-	public BlockEntityType<?> getBlockEntityType() { return Common.FOX_PLUSH_BLOCK_ENTITY.get();}
-
-	@Override
 	public VoxelShape SHAPE_NORTH(){
 		VoxelShape shape = Shapes.empty();
 		shape = Shapes.join(shape, Shapes.box(0.21875, 0, 0.25, 0.78125, 0.5, 0.75), BooleanOp.OR);

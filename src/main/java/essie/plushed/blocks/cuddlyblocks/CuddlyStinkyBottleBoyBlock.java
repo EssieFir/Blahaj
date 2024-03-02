@@ -16,8 +16,6 @@ public class CuddlyStinkyBottleBoyBlock extends CuddlyBlock {
 			.setValue(WATERLOGGED, Boolean.FALSE));
 	}
 
-	@Override
-	public BlockEntityType<?> getBlockEntityType() { return Common.FOX_PLUSH_BLOCK_ENTITY.get();}
 
 	@Override
 	public VoxelShape SHAPE_NORTH(){

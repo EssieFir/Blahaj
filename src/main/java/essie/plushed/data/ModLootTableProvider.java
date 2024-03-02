@@ -44,8 +44,9 @@ public class ModLootTableProvider  extends BlockLoot {
 			.withPool(applyExplosionCondition(block, LootPool.lootPool()
 				.setRolls(ConstantValue.exactly(1.0F))
 				.add(LootItem.lootTableItem(block)
-					.apply(CopyNameFunction
-						.copyName(CopyNameFunction.NameSource.BLOCK_ENTITY))
+					.apply(CopyNbtFunction
+						.copyData(ContextNbtProvider.BLOCK_ENTITY)
+						.copy("CustomName", "display.Name"))
 					.apply(CopyNbtFunction
 						.copyData(ContextNbtProvider.BLOCK_ENTITY)
 						.copy("Owner", "Owner")))));

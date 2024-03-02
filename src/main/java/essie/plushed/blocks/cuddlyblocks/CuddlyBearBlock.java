@@ -16,8 +16,6 @@ public class CuddlyBearBlock extends CuddlyBlock {
 			.setValue(WATERLOGGED, Boolean.FALSE));
 	}
 	@Override
-	public BlockEntityType<?> getBlockEntityType() { return Common.SOFT_BEAR_BLOCK_ENTITY.get();}
-	@Override
 	public VoxelShape SHAPE_NORTH(){
 		VoxelShape shape = Shapes.empty();
 		shape = Shapes.join(shape, Shapes.box(0.25, 0, 0.375, 0.75, 0.5625, 0.6875), BooleanOp.OR);

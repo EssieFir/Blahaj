@@ -1,5 +1,6 @@
 package essie.plushed.blocks;
 
+import essie.plushed.Common;
 import essie.plushed.CuddlyItem;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -12,7 +13,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -36,9 +36,6 @@ public abstract class CuddlyBlock extends BaseEntityBlock {
 			.setValue(FACING, Direction.NORTH)
 			.setValue(WATERLOGGED, Boolean.FALSE));
 	}
-
-
-	public BlockEntityType<?> getBlockEntityType() { return null; }
 
 	public VoxelShape SHAPE_NORTH() { return Shapes.block(); }
 	public VoxelShape SHAPE_SOUTH() { return Shapes.block(); }
@@ -97,7 +94,7 @@ public abstract class CuddlyBlock extends BaseEntityBlock {
 	}
 	@Override
 	public BlockEntity newBlockEntity(BlockPos blockPos, BlockState blockState) {
-		return new CuddlyBlockEntity(getBlockEntityType(), blockPos, blockState);
+		return new CuddlyBlockEntity(blockPos, blockState);
 	}
 
 	public void setPlacedBy(Level level, BlockPos blockPos, BlockState blockState, @Nullable LivingEntity livingEntity, ItemStack itemStack) {
@@ -110,6 +107,10 @@ public abstract class CuddlyBlock extends BaseEntityBlock {
 				if (compoundtag.contains(CuddlyItem.OWNER_KEY)) {
 					owner = compoundtag.getString(CuddlyItem.OWNER_KEY);
 				}
+			}
+
+			if (itemStack.hasCustomHoverName()) {
+				cuddlyBlockEntity.setCustomName(itemStack.getHoverName());
 			}
 
 			cuddlyBlockEntity.updateOwner(owner);
