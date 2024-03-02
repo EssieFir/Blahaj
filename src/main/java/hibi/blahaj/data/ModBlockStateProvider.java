@@ -1,7 +1,7 @@
 package hibi.blahaj.data;
 
 import hibi.blahaj.Common;
-import hibi.blahaj.blocks.CuddlySharkBlock;
+import hibi.blahaj.blocks.cuddlyblocks.CuddlySharkBlock;
 import net.minecraft.core.Direction;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.world.level.block.Block;

@@ -1,6 +1,9 @@
-package hibi.blahaj.blocks;
+package hibi.blahaj.blocks.cuddlyblocks;
 
+import hibi.blahaj.Common;
+import hibi.blahaj.blocks.CuddlyBlock;
 import net.minecraft.core.Direction;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
@@ -11,6 +14,9 @@ public class CuddlyBreadBlock extends CuddlyBlock {
 			.setValue(FACING, Direction.NORTH)
 			.setValue(WATERLOGGED, Boolean.FALSE));
 	}
+
+	@Override
+	public BlockEntityType<?> getBlockEntityType() { return Common.SOFT_BREAD_BLOCK_ENTITY.get();}
 
 	@Override
 	public VoxelShape SHAPE_NORTH() { return Shapes.box(0.3125, 0, -0.0625, 0.6875, 0.375, 1); }

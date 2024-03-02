@@ -11,6 +11,23 @@
       "entries": [
         {
           "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:copy_name",
+              "source": "block_entity"
+            },
+            {
+              "function": "minecraft:copy_nbt",
+              "ops": [
+                {
+                  "op": "replace",
+                  "source": "Owner",
+                  "target": "Owner"
+                }
+              ],
+              "source": "block_entity"
+            }
+          ],
           "name": "blahaj:toy_bear"
         }
       ],

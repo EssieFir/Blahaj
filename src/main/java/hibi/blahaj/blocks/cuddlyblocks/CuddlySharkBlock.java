@@ -1,6 +1,9 @@
-package hibi.blahaj.blocks;
+package hibi.blahaj.blocks.cuddlyblocks;
 
+import hibi.blahaj.Common;
+import hibi.blahaj.blocks.CuddlyBlock;
 import net.minecraft.core.Direction;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -12,6 +15,9 @@ public class CuddlySharkBlock extends CuddlyBlock {
 			.setValue(FACING, Direction.NORTH)
 			.setValue(WATERLOGGED, Boolean.FALSE));
 	}
+
+	@Override
+	public BlockEntityType<?> getBlockEntityType() { return Common.BLUE_SHARK_BLOCK_ENTITY.get();}
 
 	@Override
 	public VoxelShape SHAPE_NORTH(){
