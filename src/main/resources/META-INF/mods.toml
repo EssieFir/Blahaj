@@ -2,24 +2,24 @@ modLoader="javafml"
 loaderVersion="[43,)"
 license="Unlicense"
 [[mods]]
-modId="blahaj"
+modId="plushed"
 version="${file.jarVersion}"
-displayName="Blåhaj - Reforged"
-displayURL="https://modrinth.com/mod/blahaj-reforged"
+displayName="Plushed"
+displayURL="https://modrinth.com/project/plushed"
 logoFile="icon.png"
-credits="Made by Hibi"
-authors="Made by Hibi, ported to Forge by agnor99"
+credits="Made by EssieFir"
+authors="Originally Made by Hibi, ported to Forge by agnor99"
 
 description='''
-Soft toy, shark mod, 16px.
+Stop it! You're making me plush. (Plushie Mod)
 '''
-[[dependencies.blahaj]]
+[[dependencies.plushed]]
     modId="forge"
     mandatory=true
     versionRange="[43.1.2,)"
     ordering="NONE"
     side="BOTH"
-[[dependencies.blahaj]]
+[[dependencies.plushed]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.19.2,1.20)"
