@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "tag": "minecraft:wool"
+  },
+  "result": "plushed:stinky_bottle_boy_plush"
+}

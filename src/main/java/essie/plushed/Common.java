@@ -2,8 +2,10 @@ package essie.plushed;
 
 import essie.plushed.blocks.cuddlyblockentities.CuddlyBearBlockEntity;
 import essie.plushed.blocks.cuddlyblockentities.CuddlyFoxBlockEntity;
+import essie.plushed.blocks.cuddlyblockentities.CuddlyStinkyBottleBoyBlockEntity;
 import essie.plushed.blocks.cuddlyblocks.CuddlyBearBlock;
 import essie.plushed.blocks.cuddlyblocks.CuddlyFoxBlock;
+import essie.plushed.blocks.cuddlyblocks.CuddlyStinkyBottleBoyBlock;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -39,6 +41,16 @@ public class Common {
 		BlockEntityType.Builder.of(CuddlyFoxBlockEntity::new,
 			FOX_PLUSH_BLOCK.get()).build(null));
 
+	public static final RegistryObject<Block> STINKY_BOTTLE_BOY_PLUSH_BLOCK = BLOCKS.register("stinky_bottle_boy_plush", () ->
+		new CuddlyStinkyBottleBoyBlock(BlockBehaviour.Properties.of(Material.WOOL, MaterialColor.COLOR_GREEN)
+			.strength(0.5F, 0.1F)
+			.sound(SoundType.WOOL)
+			.noOcclusion()));
+	public static final RegistryObject<BlockEntityType<CuddlyStinkyBottleBoyBlockEntity>> STINKY_BOTTLE_BOY_PLUSH_BLOCK_ENTITY = BLOCK_ENTITIES.register("stinky_bottle_boy_plush", () ->
+		BlockEntityType.Builder.of(CuddlyStinkyBottleBoyBlockEntity::new,
+			STINKY_BOTTLE_BOY_PLUSH_BLOCK.get()).build(null));
+
+
 	public static final RegistryObject<Block> SOFT_BEAR_BLOCK = BLOCKS.register("toy_bear", () ->
 		new CuddlyBearBlock(BlockBehaviour.Properties.of(Material.WOOL, MaterialColor.COLOR_BROWN)
 			.strength(0.5F, 0.1F)
@@ -50,6 +62,7 @@ public class Common {
 
 	public static final RegistryObject<Item> SOFT_BEAR_ITEM = ITEMS.register("toy_bear", () -> new CuddlyItem(SOFT_BEAR_BLOCK.get(), new Item.Properties().stacksTo(1).tab(CreativeTab.PLUSHED_ITEMS_TAB), null));
 	public static final RegistryObject<Item> FOX_PLUSH_ITEM = ITEMS.register("fox_plush", () -> new CuddlyItem(FOX_PLUSH_BLOCK.get(), new Item.Properties().stacksTo(1).tab(CreativeTab.PLUSHED_ITEMS_TAB), null));
+	public static final RegistryObject<Item> STINKY_BOTTLE_BOY_PLUSH_ITEM = ITEMS.register("stinky_bottle_boy_plush", () -> new CuddlyItem(STINKY_BOTTLE_BOY_PLUSH_BLOCK.get(), new Item.Properties().stacksTo(1).tab(CreativeTab.PLUSHED_ITEMS_TAB), null));
 	public Common() {
 		BLOCKS.register(modEventBus);
 		ITEMS.register(modEventBus);

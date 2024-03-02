@@ -21,6 +21,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 	protected void registerStatesAndModels() {
 		cuddlyBlock(Common.SOFT_BEAR_BLOCK);
 		cuddlyBlock(Common.FOX_PLUSH_BLOCK);
+		cuddlyBlock(Common.STINKY_BOTTLE_BOY_PLUSH_BLOCK);
 	}
 
 	private void cuddlyBlock(RegistryObject<Block> block) {
