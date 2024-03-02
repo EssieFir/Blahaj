@@ -1,7 +1,7 @@
 {
 	"credit": "Made with Blockbench",
-  "render_type": "minecraft:translucent",
 	"ambientocclusion": false,
+	"render_type": "minecraft:translucent",
 	"texture_size": [32, 32],
 	"textures": {
 		"1": "plushed:stinky_bottle_boy_plush",
@@ -10,9 +10,9 @@
 	"elements": [
 		{
 			"name": "Head",
-			"from": [5.5, 1.25, 7.75],
-			"to": [10.5, 7.25, 12.75],
-			"rotation": {"angle": 0, "axis": "y", "origin": [0.5, 24.75, 0.75]},
+			"from": [5.525, 1.25, 7.625],
+			"to": [10.525, 7.25, 12.625],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0.525, 24.75, 0.625]},
 			"faces": {
 				"north": {"uv": [0, 0, 2.5, 3], "texture": "#1"},
 				"east": {"uv": [2.5, 0, 5, 3], "texture": "#1"},
@@ -24,9 +24,9 @@
 		},
 		{
 			"name": "Hat",
-			"from": [5, 0.75, 7.25],
-			"to": [11, 7.75, 13.25],
-			"rotation": {"angle": 0, "axis": "y", "origin": [0.5, 24.75, 0.75]},
+			"from": [5.025, 0.75, 7.125],
+			"to": [11.025, 7.75, 13.125],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0.525, 24.75, 0.625]},
 			"faces": {
 				"north": {"uv": [5, 0, 7.5, 3], "texture": "#1"},
 				"east": {"uv": [5, 3, 7.5, 6], "texture": "#1"},
@@ -37,9 +37,9 @@
 			}
 		},
 		{
-			"from": [7, 7.76, 9.25],
-			"to": [9, 8.76, 11.25],
-			"rotation": {"angle": 0, "axis": "y", "origin": [0.5, 24.75, 0.75]},
+			"from": [7.025, 7.76, 9.125],
+			"to": [9.025, 8.76, 11.125],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0.525, 24.75, 0.625]},
 			"faces": {
 				"north": {"uv": [9, 8.5, 10, 9], "texture": "#1"},
 				"east": {"uv": [9, 9, 10, 9.5], "texture": "#1"},
@@ -51,9 +51,9 @@
 		},
 		{
 			"name": "LeftArm",
-			"from": [4, 1, 4.75],
-			"to": [5, 2, 10.75],
-			"rotation": {"angle": 0, "axis": "x", "origin": [5, 1.75, 10.25]},
+			"from": [4.025, 1, 4.625],
+			"to": [5.025, 2, 10.625],
+			"rotation": {"angle": 0, "axis": "x", "origin": [5.025, 1.75, 10.125]},
 			"faces": {
 				"north": {"uv": [10.5, 1, 10, 1.5], "rotation": 180, "texture": "#1"},
 				"east": {"uv": [0.5, 9, 1, 12], "rotation": 270, "texture": "#1"},
@@ -65,9 +65,9 @@
 		},
 		{
 			"name": "Left Sleeve",
-			"from": [3.75, 0.75, 4.5],
-			"to": [5.25, 2.25, 6],
-			"rotation": {"angle": 0, "axis": "x", "origin": [5, 1.75, 10.25]},
+			"from": [3.775, 0.75, 4.375],
+			"to": [5.275, 2.25, 5.875],
+			"rotation": {"angle": 0, "axis": "x", "origin": [5.025, 1.75, 10.125]},
 			"faces": {
 				"north": {"uv": [4.5, 10, 4, 10.5], "rotation": 180, "texture": "#1"},
 				"east": {"uv": [10, 2, 10.5, 2.5], "rotation": 270, "texture": "#1"},
@@ -79,9 +79,9 @@
 		},
 		{
 			"name": "RightArm",
-			"from": [11, 1, 4.75],
-			"to": [12, 2, 10.75],
-			"rotation": {"angle": 0, "axis": "x", "origin": [11, 1.75, 10.25]},
+			"from": [11.025, 1, 4.625],
+			"to": [12.025, 2, 10.625],
+			"rotation": {"angle": 0, "axis": "x", "origin": [11.025, 1.75, 10.125]},
 			"faces": {
 				"north": {"uv": [5, 10, 4.5, 10.5], "rotation": 180, "texture": "#1"},
 				"east": {"uv": [2.5, 9, 3, 12], "rotation": 270, "texture": "#1"},
@@ -93,9 +93,9 @@
 		},
 		{
 			"name": "Right Sleeve",
-			"from": [10.75, 0.75, 4.5],
-			"to": [12.25, 2.25, 6],
-			"rotation": {"angle": 0, "axis": "x", "origin": [11, 1.75, 10.25]},
+			"from": [10.775, 0.75, 4.375],
+			"to": [12.275, 2.25, 5.875],
+			"rotation": {"angle": 0, "axis": "x", "origin": [11.025, 1.75, 10.125]},
 			"faces": {
 				"north": {"uv": [10.5, 7, 10, 7.5], "rotation": 180, "texture": "#1"},
 				"east": {"uv": [10, 5, 10.5, 5.5], "rotation": 270, "texture": "#1"},
@@ -107,9 +107,9 @@
 		},
 		{
 			"name": "LeftLeg",
-			"from": [6.1, -0.25, 0.5],
-			"to": [7.1, 0.75, 10.5],
-			"rotation": {"angle": 22.5, "axis": "y", "origin": [6.6, 0.25, 10.25]},
+			"from": [6.125, -0.25, 0.375],
+			"to": [7.125, 0.75, 10.375],
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [6.625, 0.25, 10.125]},
 			"faces": {
 				"north": {"uv": [10.5, 8, 10, 8.5], "rotation": 180, "texture": "#1"},
 				"east": {"uv": [8, 7.5, 8.5, 12.5], "rotation": 270, "texture": "#1"},
@@ -121,9 +121,9 @@
 		},
 		{
 			"name": "Left Pants",
-			"from": [5.85, -0.5, 0.25],
-			"to": [7.35, 1, 1.75],
-			"rotation": {"angle": 22.5, "axis": "y", "origin": [6.6, 0.25, 10.25]},
+			"from": [5.875, -0.5, 0.125],
+			"to": [7.375, 1, 1.625],
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [6.625, 0.25, 10.125]},
 			"faces": {
 				"north": {"uv": [10.5, 10, 10, 10.5], "rotation": 180, "texture": "#1"},
 				"east": {"uv": [9, 10, 9.5, 10.5], "rotation": 270, "texture": "#1"},
@@ -135,9 +135,9 @@
 		},
 		{
 			"name": "RightLeg",
-			"from": [8.9, -0.25, 0.5],
-			"to": [9.9, 0.75, 10.5],
-			"rotation": {"angle": -22.5, "axis": "y", "origin": [9.4, -0.25, 10.25]},
+			"from": [8.925, -0.25, 0.375],
+			"to": [9.925, 0.75, 10.375],
+			"rotation": {"angle": -22.5, "axis": "y", "origin": [9.425, -0.25, 10.125]},
 			"faces": {
 				"north": {"uv": [11, 1, 10.5, 1.5], "rotation": 180, "texture": "#1"},
 				"east": {"uv": [6.5, 8.5, 7, 13.5], "rotation": 270, "texture": "#1"},
@@ -149,9 +149,9 @@
 		},
 		{
 			"name": "Right Pants",
-			"from": [8.65, -0.5, 0.25],
-			"to": [10.15, 1, 1.75],
-			"rotation": {"angle": -22.5, "axis": "y", "origin": [9.4, -0.25, 10.25]},
+			"from": [8.675, -0.5, 0.125],
+			"to": [10.175, 1, 1.625],
+			"rotation": {"angle": -22.5, "axis": "y", "origin": [9.425, -0.25, 10.125]},
 			"faces": {
 				"north": {"uv": [4.5, 10.5, 4, 11], "rotation": 180, "texture": "#1"},
 				"east": {"uv": [10.5, 2, 11, 2.5], "rotation": 270, "texture": "#1"},

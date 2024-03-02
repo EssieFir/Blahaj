@@ -1,13 +1,11 @@
 package essie.plushed;
 
-import essie.plushed.blocks.cuddlyblockentities.CuddlyBearBlockEntity;
-import essie.plushed.blocks.cuddlyblockentities.CuddlyFoxBlockEntity;
-import essie.plushed.blocks.cuddlyblockentities.CuddlyStinkyBottleBoyBlockEntity;
+import essie.plushed.blocks.cuddlyblockentities.*;
 import essie.plushed.blocks.cuddlyblocks.CuddlyBearBlock;
 import essie.plushed.blocks.cuddlyblocks.CuddlyFoxBlock;
+import essie.plushed.blocks.cuddlyblocks.CuddlyOctoBlock;
 import essie.plushed.blocks.cuddlyblocks.CuddlyStinkyBottleBoyBlock;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
@@ -50,6 +48,23 @@ public class Common {
 		BlockEntityType.Builder.of(CuddlyStinkyBottleBoyBlockEntity::new,
 			STINKY_BOTTLE_BOY_PLUSH_BLOCK.get()).build(null));
 
+	public static final RegistryObject<Block> OCTO_PLUSH_BLUE_BLOCK = BLOCKS.register("octo_plush_blue", () ->
+		new CuddlyOctoBlock(BlockBehaviour.Properties.of(Material.WOOL, MaterialColor.COLOR_LIGHT_BLUE)
+			.strength(0.5F, 0.1F)
+			.sound(SoundType.WOOL)
+			.noOcclusion()));
+	public static final RegistryObject<BlockEntityType<CuddlyOctoBlueBlockEntity>> OCTO_PLUSH_BLUE_BLOCK_ENTITY = BLOCK_ENTITIES.register("octo_plush_blue", () ->
+		BlockEntityType.Builder.of(CuddlyOctoBlueBlockEntity::new,
+			OCTO_PLUSH_BLUE_BLOCK.get()).build(null));
+
+	public static final RegistryObject<Block> OCTO_PLUSH_PINK_BLOCK = BLOCKS.register("octo_plush_pink", () ->
+		new CuddlyOctoBlock(BlockBehaviour.Properties.of(Material.WOOL, MaterialColor.COLOR_LIGHT_BLUE)
+			.strength(0.5F, 0.1F)
+			.sound(SoundType.WOOL)
+			.noOcclusion()));
+	public static final RegistryObject<BlockEntityType<CuddlyOctoPinkBlockEntity>> OCTO_PLUSH_PINK_BLOCK_ENTITY = BLOCK_ENTITIES.register("octo_plush_pink", () ->
+		BlockEntityType.Builder.of(CuddlyOctoPinkBlockEntity::new,
+			OCTO_PLUSH_PINK_BLOCK.get()).build(null));
 
 	public static final RegistryObject<Block> SOFT_BEAR_BLOCK = BLOCKS.register("toy_bear", () ->
 		new CuddlyBearBlock(BlockBehaviour.Properties.of(Material.WOOL, MaterialColor.COLOR_BROWN)
@@ -63,6 +78,8 @@ public class Common {
 	public static final RegistryObject<Item> SOFT_BEAR_ITEM = ITEMS.register("toy_bear", () -> new CuddlyItem(SOFT_BEAR_BLOCK.get(), new Item.Properties().stacksTo(1).tab(CreativeTab.PLUSHED_ITEMS_TAB), null));
 	public static final RegistryObject<Item> FOX_PLUSH_ITEM = ITEMS.register("fox_plush", () -> new CuddlyItem(FOX_PLUSH_BLOCK.get(), new Item.Properties().stacksTo(1).tab(CreativeTab.PLUSHED_ITEMS_TAB), null));
 	public static final RegistryObject<Item> STINKY_BOTTLE_BOY_PLUSH_ITEM = ITEMS.register("stinky_bottle_boy_plush", () -> new CuddlyItem(STINKY_BOTTLE_BOY_PLUSH_BLOCK.get(), new Item.Properties().stacksTo(1).tab(CreativeTab.PLUSHED_ITEMS_TAB), null));
+	public static final RegistryObject<Item> OCTO_PLUSH_BLUE_ITEM = ITEMS.register("octo_plush_blue", () -> new CuddlyOctoBlueItem(OCTO_PLUSH_BLUE_BLOCK.get(), new Item.Properties().stacksTo(1).tab(CreativeTab.PLUSHED_ITEMS_TAB), null));
+	public static final RegistryObject<Item> OCTO_PLUSH_PINK_ITEM = ITEMS.register("octo_plush_pink", () -> new CuddlyOctoPinkItem(OCTO_PLUSH_PINK_BLOCK.get(), new Item.Properties().stacksTo(1).tab(CreativeTab.PLUSHED_ITEMS_TAB), null));
 	public Common() {
 		BLOCKS.register(modEventBus);
 		ITEMS.register(modEventBus);

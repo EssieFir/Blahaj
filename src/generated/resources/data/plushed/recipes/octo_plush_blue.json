@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "tag": "minecraft:wool"
+  },
+  "result": "plushed:octo_plush_blue"
+}

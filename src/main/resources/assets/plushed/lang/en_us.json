@@ -3,6 +3,8 @@
 	"item.plushed.toy_bear": "Toy Bear",
 	"item.plushed.fox_plush": "Fox Plush",
   "item.plushed.stinky_bottle_boy_plush": "Stinky Bottle Boy Plush",
+  "item.plushed.octo_plush_blue": "Octo Plush",
+  "item.plushed.octo_plush_pink": "Octo Plush",
 	"tooltip.plushed.owner": "%s's %s",
 	"response.plushed.give_away": "You feel attached to your Plushie"
 }

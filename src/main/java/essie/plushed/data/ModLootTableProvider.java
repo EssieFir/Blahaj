@@ -30,6 +30,8 @@ public class ModLootTableProvider  extends BlockLoot {
 		add(Common.SOFT_BEAR_BLOCK.get(), this::addCuddlyBlock);
 		add(Common.FOX_PLUSH_BLOCK.get(), this::addCuddlyBlock);
 		add(Common.STINKY_BOTTLE_BOY_PLUSH_BLOCK.get(), this::addCuddlyBlock);
+		add(Common.OCTO_PLUSH_PINK_BLOCK.get(), this::addCuddlyBlock);
+		add(Common.OCTO_PLUSH_BLUE_BLOCK.get(), this::addCuddlyBlock);
 	}
 
 	@Override
