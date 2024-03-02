@@ -1,19 +1,18 @@
 package hibi.blahaj;
 
-import hibi.blahaj.blocks.CuddlyBlockEntity;
 import hibi.blahaj.blocks.cuddlyblockentities.CuddlyBearBlockEntity;
 import hibi.blahaj.blocks.cuddlyblockentities.CuddlyBreadBlockEntity;
+import hibi.blahaj.blocks.cuddlyblockentities.CuddlyFoxBlockEntity;
 import hibi.blahaj.blocks.cuddlyblockentities.CuddlySharkBlockEntity;
 import hibi.blahaj.blocks.cuddlyblocks.CuddlyBearBlock;
 import hibi.blahaj.blocks.cuddlyblocks.CuddlyBreadBlock;
+import hibi.blahaj.blocks.cuddlyblocks.CuddlyFoxBlock;
 import hibi.blahaj.blocks.cuddlyblocks.CuddlySharkBlock;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
@@ -51,6 +50,15 @@ public class Common {
 		BlockEntityType.Builder.of(CuddlyBreadBlockEntity::new,
 			SOFT_BREAD_BLOCK.get()).build(null));
 
+	public static final RegistryObject<Block> FOX_PLUSH_BLOCK = BLOCKS.register("fox_plush", () ->
+		new CuddlyFoxBlock(BlockBehaviour.Properties.of(Material.WOOL, MaterialColor.COLOR_ORANGE)
+			.strength(0.5F, 0.1F)
+			.sound(SoundType.WOOL)
+			.noOcclusion()));
+	public static final RegistryObject<BlockEntityType<CuddlyFoxBlockEntity>> FOX_PLUSH_BLOCK_ENTITY = BLOCK_ENTITIES.register("fox_plush", () ->
+		BlockEntityType.Builder.of(CuddlyFoxBlockEntity::new,
+			FOX_PLUSH_BLOCK.get()).build(null));
+
 	public static final RegistryObject<Block> SOFT_BEAR_BLOCK = BLOCKS.register("toy_bear", () ->
 		new CuddlyBearBlock(BlockBehaviour.Properties.of(Material.WOOL, MaterialColor.COLOR_BROWN)
 			.strength(0.5F, 0.1F)
@@ -63,6 +71,7 @@ public class Common {
 	public static final RegistryObject<Item> BLUE_SHARK_ITEM = ITEMS.register("blue_shark", () -> new CuddlyItem(BLUE_SHARK_BLOCK.get(), new Item.Properties().stacksTo(1).tab(CreativeModeTab.TAB_MISC), "item.blahaj.blue_shark.tooltip"));
 	public static final RegistryObject<Item> SOFT_BREAD_ITEM = ITEMS.register("bread", () -> new CuddlyItem(SOFT_BREAD_BLOCK.get(), new Item.Properties().stacksTo(1).tab(CreativeModeTab.TAB_MISC), null));
 	public static final RegistryObject<Item> SOFT_BEAR_ITEM = ITEMS.register("toy_bear", () -> new CuddlyItem(SOFT_BEAR_BLOCK.get(), new Item.Properties().stacksTo(1).tab(CreativeModeTab.TAB_MISC), null));
+	public static final RegistryObject<Item> FOX_PLUSH_ITEM = ITEMS.register("fox_plush", () -> new CuddlyItem(FOX_PLUSH_BLOCK.get(), new Item.Properties().stacksTo(1).tab(CreativeModeTab.TAB_MISC), null));
 	public Common() {
 		BLOCKS.register(modEventBus);
 		ITEMS.register(modEventBus);

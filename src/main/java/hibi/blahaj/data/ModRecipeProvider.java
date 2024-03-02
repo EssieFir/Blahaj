@@ -27,6 +27,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		plushieRecipe(Ingredient.of(ItemTags.WOOL), BLUE_SHARK_ITEM.get(), pFinishedRecipeConsumer);
 		plushieRecipe(Ingredient.of(ItemTags.WOOL), SOFT_BREAD_ITEM.get(), pFinishedRecipeConsumer);
 		plushieRecipe(Ingredient.of(ItemTags.WOOL), SOFT_BEAR_ITEM.get(), pFinishedRecipeConsumer);
+		plushieRecipe(Ingredient.of(ItemTags.WOOL), FOX_PLUSH_ITEM.get(), pFinishedRecipeConsumer);
 	}
 
 	private void plushieRecipe(Ingredient input, Item output, Consumer<FinishedRecipe> pFinishedRecipeConsumer) {

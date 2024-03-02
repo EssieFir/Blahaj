@@ -25,6 +25,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 		cuddlyBlock(Common.BLUE_SHARK_BLOCK);
 		cuddlyBlock(Common.SOFT_BREAD_BLOCK);
 		cuddlyBlock(Common.SOFT_BEAR_BLOCK);
+		cuddlyBlock(Common.FOX_PLUSH_BLOCK);
 	}
 
 	private void cuddlyBlock(RegistryObject<Block> block) {
