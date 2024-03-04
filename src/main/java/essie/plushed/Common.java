@@ -66,8 +66,8 @@ public class Common {
 	public static final RegistryObject<Item> SOFT_BEAR_ITEM = ITEMS.register("toy_bear", () -> new CuddlyItem(SOFT_BEAR_BLOCK.get(), new Item.Properties().stacksTo(1).tab(CreativeTab.PLUSHED_ITEMS_TAB), null));
 	public static final RegistryObject<Item> FOX_PLUSH_ITEM = ITEMS.register("fox_plush", () -> new CuddlyItem(FOX_PLUSH_BLOCK.get(), new Item.Properties().stacksTo(1).tab(CreativeTab.PLUSHED_ITEMS_TAB), null));
 	public static final RegistryObject<Item> STINKY_BOTTLE_BOY_PLUSH_ITEM = ITEMS.register("stinky_bottle_boy_plush", () -> new CuddlyItem(STINKY_BOTTLE_BOY_PLUSH_BLOCK.get(), new Item.Properties().stacksTo(1).tab(CreativeTab.PLUSHED_ITEMS_TAB), null));
-	public static final RegistryObject<Item> OCTO_PLUSH_BLUE_ITEM = ITEMS.register("octo_plush_blue", () -> new CuddlyOctoBlueItem(OCTO_PLUSH_BLUE_BLOCK.get(), new Item.Properties().stacksTo(1).tab(CreativeTab.PLUSHED_ITEMS_TAB), null));
-	public static final RegistryObject<Item> OCTO_PLUSH_PINK_ITEM = ITEMS.register("octo_plush_pink", () -> new CuddlyOctoPinkItem(OCTO_PLUSH_PINK_BLOCK.get(), new Item.Properties().stacksTo(1).tab(CreativeTab.PLUSHED_ITEMS_TAB), null));
+	public static final RegistryObject<Item> OCTO_PLUSH_BLUE_ITEM = ITEMS.register("octo_plush_blue", () -> new CuddlyOctoItem(OCTO_PLUSH_BLUE_BLOCK.get(), new Item.Properties().stacksTo(1).tab(CreativeTab.PLUSHED_ITEMS_TAB), null));
+	public static final RegistryObject<Item> OCTO_PLUSH_PINK_ITEM = ITEMS.register("octo_plush_pink", () -> new CuddlyOctoItem(OCTO_PLUSH_PINK_BLOCK.get(), new Item.Properties().stacksTo(1).tab(CreativeTab.PLUSHED_ITEMS_TAB), null));
 	public Common() {
 		BLOCKS.register(modEventBus);
 		ITEMS.register(modEventBus);
